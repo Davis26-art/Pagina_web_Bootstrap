@@ -4,3 +4,12 @@ body {
     font-weight: 100;
     font-style: normal;
 }
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
