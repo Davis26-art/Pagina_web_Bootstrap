@@ -1,21 +1,123 @@
+/* ================================
+   PALETA DE COLORES PETWORLD
+   ================================ */
+:root {
+  --color-primario: #ff914d;
+  --color-secundario: #ffd6a5;
+  --color-oscuro: #2e4052;
+  --color-texto: #2c2c2c;
+  --color-fondo: #fff8f0;
+}
+
+/* ================================
+   ESTILOS GENERALES
+   ================================ */
 body {
-    font-family: "Karla", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: "Karla", sans-serif;
+  line-height: 1.6;
 }
 
-.btn:hover {
-    transform: scale(1.05);
-    transition: all 0.2s ease-in-out;
+/* ================================
+   NAVBAR
+   ================================ */
+.navbar {
+  background-color: var(--color-oscuro) !important;
 }
 
+.navbar-brand img {
+  margin-right: 8px;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primario) !important;
+}
+
+/* ================================
+   BOTONES
+   ================================ */
+.btn-primary {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ff7a29;
+  border-color: #ff7a29;
+}
+
+/* ================================
+   SECCIONES
+   ================================ */
+.container h2,
+.container h1 {
+  color: var(--color-oscuro);
+}
+
+.bg-primary-subtle {
+  background-color: var(--color-secundario) !important;
+}
+
+/* ================================
+   CARDS
+   ================================ */
 .card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: var(--color-oscuro);
+  font-weight: 700;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+  color: var(--color-texto);
+}
+
+footer a {
+  color: var(--color-texto);
+}
+
+footer a:hover {
+  color: var(--color-primario);
+}
+
+/* ================================
+   IMÁGENES DEL CARRUSEL
+   ================================ */
 .carousel-item img {
-  height: 700px;
   object-fit: cover;
-  width: 100%;
+  filter: brightness(0.95);
+  border-radius: 5px;
+}
+
+/* ================================
+   RESPONSIVE AJUSTES
+   ================================ */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
 }
